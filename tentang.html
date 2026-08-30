@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Desa — Seburing Ilir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="leaf">🌿</span> Desa Seburing Ilir</div>
+    <nav class="nav-links">
+      <a href="index.html" class="hide-mobile">Beranda</a>
+      <a href="tentang.html" class="active">Tentang</a>
+      <a href="potensi.html" class="hide-mobile">Potensi</a>
+      <a href="galeri.html" class="hide-mobile">Galeri</a>
+      <a href="lokasi.html" class="hide-mobile">Lokasi</a>
+      <a href="kontak.html" class="nav-cta">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Tentang Desa</div>
+    <h1>Kehidupan yang tumbuh selaras dengan alam</h1>
+    <p class="lede">Mengenal lebih dekat cerita dan keseharian warga Seburing Ilir.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>Seburing Ilir adalah sebuah desa di Kecamatan Semparuk, Kabupaten Sambas, Kalimantan Barat. Dikelilingi lahan hijau dan udara pedesaan yang tenang, desa ini menjadi rumah bagi warga yang hidup dari hasil bumi dan kerja sama antar tetangga.</p>
+        <p>Suasana damai, ramah, dan dekat dengan alam menjadikan Seburing Ilir bukan sekadar tempat tinggal, tapi juga cerminan kehidupan pedesaan Kalimantan Barat yang otentik.</p>
+        <div class="fact-row">
+          <div class="fact"><div class="n">4.545</div><div class="l">Jumlah Penduduk</div></div>
+          <div class="fact"><div class="n">20,00 km²</div><div class="l">Luas Wilayah</div></div>
+          <div class="fact"><div class="n">Semparuk</div><div class="l">Kecamatan</div></div>
+        </div>
+      </div>
+      <div class="value-cluster">
+        <div class="v-badge"><span class="v-ic">🌿</span><span>Asri &amp; Alami</span></div>
+        <div class="v-badge"><span class="v-ic">🤝</span><span>Gotong Royong</span></div>
+        <div class="v-badge"><span class="v-ic">😊</span><span>Ramah</span></div>
+        <div class="v-badge"><span class="v-ic">🕊️</span><span>Damai &amp; Tentram</span></div>
+        <div class="v-badge"><span class="v-ic">🌾</span><span>Dekat dengan Alam</span></div>
+      </div>
+    </div>
+    <div class="page-nav-cta reveal">
+      <a class="btn btn-primary" href="potensi.html">Lihat Potensi Desa →</a>
+      <a class="btn btn-ghost" href="index.html">← Kembali ke Beranda</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">🌿 Desa Seburing Ilir — Semparuk, Sambas, Kalimantan Barat</div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {threshold:.12});
+revealEls.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

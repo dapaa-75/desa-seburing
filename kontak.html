@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — Desa Seburing Ilir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="leaf">🌿</span> Desa Seburing Ilir</div>
+    <nav class="nav-links">
+      <a href="index.html" class="hide-mobile">Beranda</a>
+      <a href="tentang.html" class="hide-mobile">Tentang</a>
+      <a href="potensi.html" class="hide-mobile">Potensi</a>
+      <a href="galeri.html" class="hide-mobile">Galeri</a>
+      <a href="lokasi.html" class="hide-mobile">Lokasi</a>
+      <a href="kontak.html" class="active">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Kontak</div>
+    <h1>Ingin berkunjung atau kerja sama?</h1>
+    <p class="lede">Hubungi perangkat Desa Seburing Ilir untuk info lebih lanjut.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="contact-wrap reveal">
+      <h2>Mari terhubung dengan kami</h2>
+      <p>Hubungi pengelola atau perangkat Desa Seburing Ilir untuk info lebih lanjut seputar kunjungan, produk desa, atau kerja sama.</p>
+      <div class="contact-grid">
+        <a class="c-card" href="mailto:seburing@gmail.com">
+          <div class="lbl">Email</div>
+          <div class="val">seburing@gmail.com</div>
+        </a>
+        <div class="c-card">
+          <div class="lbl">Kantor Desa</div>
+          <div class="val">Seburing Ilir, Semparuk, Sambas</div>
+        </div>
+        <div class="c-card">
+          <div class="lbl">Kepala Desa</div>
+          <div class="val">Iswandi</div>
+        </div>
+        <div class="c-card">
+          <div class="lbl">Jam Kunjungan</div>
+          <div class="val">Buka 24 Jam</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-nav-cta reveal">
+      <a class="btn btn-ghost" href="index.html">← Kembali ke Beranda</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">🌿 Desa Seburing Ilir — Semparuk, Sambas, Kalimantan Barat</div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {threshold:.12});
+revealEls.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

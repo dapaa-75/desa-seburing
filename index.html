@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beranda — Desa Seburing Ilir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="leaf">🌿</span> Desa Seburing Ilir</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="tentang.html" class="hide-mobile">Tentang</a>
+      <a href="potensi.html" class="hide-mobile">Potensi</a>
+      <a href="galeri.html" class="hide-mobile">Galeri</a>
+      <a href="lokasi.html" class="hide-mobile">Lokasi</a>
+      <a href="kontak.html" class="nav-cta">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Kecamatan Semparuk, Kabupaten Sambas, Kalimantan Barat</div>
+    <h1>Selamat datang di <em>Desa Seburing Ilir</em></h1>
+    <p class="lede">Desa yang asri dan tenang di tepi Kalimantan Barat — menyimpan potensi alam, hasil bumi, kerajinan, dan kehangatan warga yang siap disambangi.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="potensi.html">🌱 Jelajahi Potensi Desa</a>
+      <a class="btn btn-ghost" href="kontak.html">Hubungi Kami</a>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="quote-panel">
+        <div class="quote-panel-deco">🌾</div>
+        <p class="pantun">Air jernih di parit desa,<br>Sawah menghijau sepanjang mata memandang;<br>Seburing Ilir tempat kami berdesa,<br>Ramah tamah menyambut siapa datang.</p>
+        <div class="stat-strip">
+          <div class="s-item"><div class="s-n">4.545</div><div class="s-l">Jiwa Penduduk</div></div>
+          <div class="s-div"></div>
+          <div class="s-item"><div class="s-n">20,00 km²</div><div class="s-l">Luas Wilayah</div></div>
+          <div class="s-div"></div>
+          <div class="s-item"><div class="s-n">Semparuk</div><div class="s-l">Kecamatan</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="tag">Jelajahi Halaman</span>
+      <h2>Kenali Seburing Ilir lebih dalam</h2>
+    </div>
+    <div class="potensi-list reveal">
+      <a class="p-row" href="tentang.html" style="text-decoration:none;">
+        <div class="p-num">01</div>
+        <div class="p-body"><h3><span class="em">🏡</span> Tentang Desa</h3><p>Cerita, nilai, dan kehidupan warga Seburing Ilir sehari-hari.</p></div>
+      </a>
+      <a class="p-row" href="potensi.html" style="text-decoration:none;">
+        <div class="p-num">02</div>
+        <div class="p-body"><h3><span class="em">🌾</span> Potensi Desa</h3><p>Wisata alam, kuliner, kerajinan, pertanian, hingga budaya khas desa.</p></div>
+      </a>
+      <a class="p-row" href="galeri.html" style="text-decoration:none;">
+        <div class="p-num">03</div>
+        <div class="p-body"><h3><span class="em">📷</span> Galeri</h3><p>Momen dan suasana asli dari Seburing Ilir.</p></div>
+      </a>
+      <a class="p-row" href="lokasi.html" style="text-decoration:none;">
+        <div class="p-num">04</div>
+        <div class="p-body"><h3><span class="em">📍</span> Lokasi</h3><p>Cara menuju Desa Seburing Ilir, Kecamatan Semparuk.</p></div>
+      </a>
+      <a class="p-row" href="kontak.html" style="text-decoration:none;">
+        <div class="p-num">05</div>
+        <div class="p-body"><h3><span class="em">✉️</span> Kontak</h3><p>Hubungi perangkat desa untuk kunjungan atau kerja sama.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">🌿 Desa Seburing Ilir — Semparuk, Sambas, Kalimantan Barat</div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {threshold:.12});
+revealEls.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
